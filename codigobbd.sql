@@ -88,7 +88,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `prestamos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `prestamos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `usuario_id` int NOT NULL,
@@ -118,7 +118,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `prestamos_atrasos_simulados`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `prestamos_atrasos_simulados` (
   `prestamo_id` int NOT NULL,
   PRIMARY KEY (`prestamo_id`)
@@ -141,7 +141,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tiempo_simulacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tiempo_simulacion` (
   `id` tinyint NOT NULL,
   `fecha_actual` date NOT NULL,
@@ -165,7 +165,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -198,7 +198,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuarios_deuda_simulada`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET NAMES utf8mb4 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios_deuda_simulada` (
   `usuario_id` int NOT NULL,
   PRIMARY KEY (`usuario_id`)
@@ -218,6 +218,7 @@ UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
